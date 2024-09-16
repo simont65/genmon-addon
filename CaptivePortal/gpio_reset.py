@@ -4,7 +4,7 @@ import time
 
 def ActivateHotspot():
     subprocess.run(['systemctl', 'stop', 'dnsmasq'])
-    subprocess.run(['nmcli', 'd', 'wifi', 'hotspot', 'ifname', 'wlan0', 'ssid', 'config', 'password', 'genmon00'])
+    subprocess.run(['nmcli', 'd', 'wifi', 'hotspot', 'ifname', 'wlan0', 'ssid', 'genmon-config', 'password', 'genmon00'])
     ActivatePortal()
 
 def ActivatePortal():
