@@ -120,6 +120,6 @@ def ShutdownHotspot(ssid, wifi_key):
     subprocess.run(['nmcli', 'dev', 'wifi', 'connect', ssid, 'password', wifi_key])
     subprocess.run(['systemctl', 'start', 'dnsmasq'])
     subprocess.run(['nmcli', 'conn', 'delete', 'id', 'Hotspot'])
-
+ 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 5000)
