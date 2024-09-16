@@ -2,6 +2,7 @@ import RPi.GPIO as GPIO
 import subprocess
 import time
 
+
 def ActivateHotspot():
     subprocess.run(['systemctl', 'stop', 'dnsmasq'])
     subprocess.run(['nmcli', 'd', 'wifi', 'hotspot', 'ifname', 'wlan0', 'ssid', 'genmon-config', 'password', 'genmon00'])
