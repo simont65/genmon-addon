@@ -1,4 +1,11 @@
 /bin/bash ./Common.sh
+/bin/bash ./Common.sh
+
+cd ~/genmon-addon/
+git config --global --add safe.directory '*'
+
+echo "Install Log2ram"
+/bin/bash ~/genmon-addon/Setup/Log2Ram.sh
 
 echo "Clone and install GenMon"
 cd ~/
